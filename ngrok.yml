@@ -1,0 +1,9 @@
+# authtoken: 302O2W6wlZkrVMgVngbyxxxRUaz_2urSeoH7DhXqrDFf5vFHE
+
+# tunnels:
+#   sonarqube:
+#     proto: http
+#     addr: 9000
+#   jenkins:
+#     proto: http
+#     addr: 8080
