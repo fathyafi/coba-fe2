@@ -1,0 +1,30 @@
+name: SonarQube Analysis
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  sonar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run SonarQube Analysis
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          npm install -g sonar-scanner
+          sonar-scanner \
+            -Dsonar.projectKey=frontend-vue \
+            -Dsonar.sources=src \
+            -Dsonar.projectBaseDir=. \
+            -Dsonar.host.url=http://172.20.0.2:9000 \
+            -Dsonar.login=$SONAR_TOKEN

@@ -9,7 +9,7 @@ export const useAuthStore = defineStore('auth', () => {
   const token = ref(null);
   const isAuthenticated = ref(false);
   const isLoading = ref(false);
-  const baseURL = process.env.VUE_APP_SERVICE_API || 'http://localhost:8080';
+  const baseURL = "http://coba-be-fathyafi-dev.apps.rm1.0a51.p1.openshiftapps.com";
 
   // --- Firebase Client SDK initialization ---
   const firebaseConfig = {

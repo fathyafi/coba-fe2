@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coba-fe3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: coba-fe3
+  template:
+    metadata:
+      labels:
+        app: coba-fe3
+    spec:
+      containers:
+        - name: coba-fe3
+          image: fathyafi/coba-fe4:latest    # Ganti setelah build
+          ports:
+            - containerPort: 8080

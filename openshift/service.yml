@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: coba-fe3
+spec:
+  selector:
+    app: coba-fe3
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

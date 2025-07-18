@@ -1,4 +1,4 @@
-version: "3.8"
+# version: "3.8"
 
 services:
   vue-app:
@@ -33,3 +33,4 @@ services:
 volumes:
   jenkins_home:
   sonarqube_data:
+
