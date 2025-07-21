@@ -94,7 +94,7 @@ pipeline {
             sonar-scanner \
               -Dsonar.projectKey=sq-fe \
               -Dsonar.sources=src \
-              -Dsonar.host.url=https://ea260dcaa8c0.ngrok-free.app \
+              -Dsonar.host.url=https://fc267257b1b0.ngrok-free.app \
               -Dsonar.login=$SONAR_TOKEN
           '''
         }
